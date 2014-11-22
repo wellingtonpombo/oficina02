@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>App Exemplo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/template_basico.css" rel="stylesheet">
+
+
+    <script src="js/angular.min.js"></script>
+    <script src="scripts/mycode.js"></script>
+
+</head>
+
+<body role="document" ng-app="HackingCodeApp" ng-controller="MainController">
+
+
+
+    <div class="container">
+
+        <div class="template_basico">
+            <h1>Dados da Empresa</h1>
+
+            <form class="lead">
+                <input type="text" ng-model="nome" placeholder="Digite Algo para teste" />
+                {{nome}}
+                    
+                <input type="button" ng-click="registro()" value="Carregar os Dados" class="btn btn-danger">
+            </form>
+
+            <div class="col-md-4">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Empresa</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="informacao in lista">
+                            <td class="text-left">{{informacao.emp_nome}}</td>
+                            <td class="text-left">{{informacao.emp_status}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                {{lista}}
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
